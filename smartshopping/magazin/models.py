@@ -2,9 +2,11 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class LantMagazine(models.Model):
+    user_owner = models.ForeignKey(User, related_name="lanturi", null=True)
     nume = models.CharField(max_length=100, null=True)
     email = models.EmailField(null=True)
     cod = models.CharField(max_length=100, null=True)
