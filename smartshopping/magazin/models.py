@@ -17,6 +17,7 @@ class LantMagazineForm(forms.ModelForm):
 
 
 class Magazin(models.Model):
+    lant = models.ForeignKey(LantMagazine, related_name='magazine', null=True)
     nume = models.CharField(max_length=100, null=True)
     city = models.CharField(max_length=20, null=True)
     country = models.CharField(max_length=20, null=True)
