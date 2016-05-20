@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django import forms
 from magazin.models import Magazin
 
 class Oferta(models.Model):
@@ -11,3 +12,7 @@ class Oferta(models.Model):
     data_sfarsirii = models.DateTimeField(null=True)
 
 
+class OfertaForm(form.ModelForm):
+    class Meta:
+        model = Oferta
+        fields = ['titlu', 'descriere', 'data_inceperii', 'data_sfarsirii']
