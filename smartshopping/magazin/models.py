@@ -9,10 +9,25 @@ class LantMagazine(models.Model):
     email = models.EmailField(null=True)
     cod = models.CharField(max_length=100, null=True)
 
+
 class LantMagazineForm(forms.ModelForm):
-
-
     class Meta: 
         model = LantMagazine
         fields = ['nume', 'email', 'cod']
 
+
+class Magazin(models.Model):
+    nume = models.CharField(max_length=100, null=True)
+    city = models.CharField(max_length=20, null=True)
+    country = models.CharField(max_length=20, null=True)
+    adresa = models.CharField(max_length=300, null=True)
+
+
+class MagazinForm(forms.ModelForm):
+    city = forms.ChoiceField(choices=[(x, x) for x in ['Timisoara']])
+    country = forms.ChoiceField(choices=[(x, x) for x in ['Romania']])
+
+
+    class Meta:
+        model = Magazin
+        fields = ['nume', 'city', 'country', 'adresa']
