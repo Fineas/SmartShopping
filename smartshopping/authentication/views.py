@@ -34,7 +34,7 @@ def register_page(request):
                     errors.append("Email is already taken")
                 city = form.cleaned_data['city']
                 country = form.cleaned_data['country']
-                address=form.cleaned_data['address']
+                address = form.cleaned_data['address']
                 phone = form.cleaned_data['phone']
                 if password.isdigit():
                     errors.append("Password is entirely numeric")
@@ -118,12 +118,3 @@ def reset_pass(request):
                    'errors': errors})
 
 
-def forgot(request):
-    return render(request, 'authentication/forget.html')
-
-
-def forgotnewpass(request):
-    if request.method == 'POST':
-        return render(request, 'authentication/forget.html')
-    else:
-        return render(request, 'authentication/newpass.html')
