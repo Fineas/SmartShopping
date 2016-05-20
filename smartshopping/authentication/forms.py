@@ -27,6 +27,12 @@ class RegisterForm(forms.Form):
     address = forms.CharField(max_length=100, label='address',
                                widget=forms.TextInput(
                                    attrs={'required': 'required'}))
+    country = forms.CharField(max_length=100, label='country',
+                              widget=forms.TextInput(
+                                  attrs={'required': 'required'}))
+    city = forms.CharField(max_length=100, label='city',
+                              widget=forms.TextInput(
+                                  attrs={'required': 'required'}))
 
     phone = forms.IntegerField(label='Phone number', widget=forms.NumberInput(
         attrs={'required': 'required'}))

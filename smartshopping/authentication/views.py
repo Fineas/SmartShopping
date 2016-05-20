@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.contrib.auth import logout
-import md5
+
 
 
 @login_required
@@ -32,6 +32,8 @@ def register_page(request):
                 email = form.cleaned_data['email']
                 if User.objects.filter(email=email).exists():
                     errors.append("Email is already taken")
+                city = form.cleaned_data['city']
+                country = form.cleaned_data['country']
                 address=form.cleaned_data['address']
                 phone = form.cleaned_data['phone']
                 if password.isdigit():
@@ -48,9 +50,8 @@ def register_page(request):
                 new_user = User.objects.create_user(username, email, password)
                 new_user.save()
                 account = authentication.models.Account.objects.create(
-                    user=new_user, address=address,
+                    user=new_user, city=city, country=country, address=address,
                     telefon=phone)
-                account.cod = account.gravatar_photo()
                 account.save()
                 user = authenticate(username=username, password=password)
                 login(request, user)
