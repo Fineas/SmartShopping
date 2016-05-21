@@ -12,7 +12,7 @@ class Oferta(models.Model):
     data_sfarsirii = models.DateTimeField(null=True)
 
 
-class OfertaForm(form.ModelForm):
+class OfertaForm(forms.ModelForm):
     class Meta:
         model = Oferta
         fields = ['titlu', 'descriere', 'data_inceperii', 'data_sfarsirii']
