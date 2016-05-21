@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^', include('authentication.urls')),
     url(r'^', include('home.urls')),
     url(r'^', include('bonuri.urls')),
+    url(r'^', include('faq.urls')),
 ]
