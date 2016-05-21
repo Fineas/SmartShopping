@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64,x86"
+    api-level="23"
+    density="420dpi"
+    format="7"
+    timestamp="10299608742913" >
+
+    <task
+        name="javac"
+        duration="485" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="38" />
+    <task
+        name="verifier"
+        duration="43" />
+
+    <artifact
+        location="/home/roadd/Workspace/java-workspace/SmartShop/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="10299608742913" >
+        <artifact
+            location="/home/roadd/Workspace/java-workspace/SmartShop/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

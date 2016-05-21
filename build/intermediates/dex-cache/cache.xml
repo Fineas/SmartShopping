@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/roadd/Workspace/java-workspace/SmartShop/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9d808af7627ce200b99e976aae90b9c9b7a8828b">
+        <dex dex="/home/roadd/Workspace/java-workspace/SmartShop/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46fb4ed6350fce246d7190644ac3a2ad137b7898/classes.dex" />
+    </item>
+
+</items>
