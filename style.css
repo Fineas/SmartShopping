@@ -194,3 +194,14 @@ a{
 	margin-top: 35%;
 }
 
+.partnere_button{
+	text-align: center;
+	margin-top: 2%;
+	color: #ccc !important;
+}
+
+#logIn{
+	font-size: 50px;
+	color: #cc3467;
+	font-weight: 800px;
+}
