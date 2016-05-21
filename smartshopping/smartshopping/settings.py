@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'home',
     'bonuri',
     'faq',
+    'contact',
 ]
 
 MIDDLEWARE_CLASSES = [

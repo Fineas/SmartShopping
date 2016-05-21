@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^', include('home.urls')),
     url(r'^', include('bonuri.urls')),
     url(r'^', include('faq.urls')),
+    url(r'^', include('contact.urls')),
 ]
