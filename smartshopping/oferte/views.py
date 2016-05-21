@@ -8,6 +8,7 @@ def oferta(request):
     if request.method == 'POST':
         if oferta_form.is_valid():
             instance = oferta_form.save(commit=False)
+            #instance.magaziin = smt smt 
             instance.save()
     return render(request, 'magazin/lant.html', {
         'form': oferta_form
