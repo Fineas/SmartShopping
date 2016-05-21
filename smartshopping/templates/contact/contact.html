@@ -49,7 +49,18 @@
 	       <br><br><br><br> 
       
        <div class="row">
+         <form method="POST">{% csrf_token %}
         <form class="col s12">
+
+          {% if error %}
+                    <div class="error">
+		      {% for message in errors %}
+                        <ul>
+                            <li>{{ message }}</li>
+                        </ul>
+                    {% endfor %}
+                    </div>
+		    {% endif %}
           <div class="row">
             <div class="input-field col s6">
               <i class="material-icons prefix">account_circle</i>
@@ -63,11 +74,12 @@
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
+              <input id="message" type="tel" class="validate">
+              <label for="icon_telephone">Message</label>
             </div>
           </div>
           <button class="waves-effect waves-light btn">button</button>
+            </form>
         </form>
       </div>
         
