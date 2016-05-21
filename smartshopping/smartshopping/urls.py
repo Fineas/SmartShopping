@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^', include('magazin.urls')),
     url(r'^', include('authentication.urls')),
     url(r'^', include('home.urls')),
+    url(r'^', include('bonuri.urls')),
 ]

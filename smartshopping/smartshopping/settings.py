@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'magazin',
     'authentication',
     'home',
+    'bonuri',
 ]
 
 MIDDLEWARE_CLASSES = [
