@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static "css/materialize.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+    <!-- NAVBAR -->
+
+  <nav class="light-blue lighten-1" role="navigation" id="menu">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="{% static "img/logo.png" id=" %}"logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">{{ request.user.username }}<i class="left material-icons">perm_identity</i></a></li>
+        <a href="/logout/" class="waves-effect waves-light btn" id="left-menu-button">Logout</a>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">request.user.username <i class="left material-icons">perm_identity</i></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+    <!-- /NAVBAR -->
+  
+  <div class="row">
+    
+    <!-- Left-Menu -->
+
+    <div class="col s3 card-panel teal lighten-2 " id="left-nav">
+        <ul class="center">
+            <li><a class="waves-effect waves-light btn" id="left-menu-button"><i class="material-icons left">cloud</i>Lista Bonuri</a></li>
+            <li><a class="waves-effect waves-light btn" id="left-menu-button"><i class="material-icons left">cloud</i>button</a></li>
+            <li><a class="waves-effect waves-light btn" id="left-menu-button"><i class="material-icons left">cloud</i>button</a></li>
+            <li><a class="waves-effect waves-light btn" id="left-menu-button"><i class="material-icons left">cloud</i>button</a></li>
+            <li><a class="waves-effect waves-light btn" id="left-menu-button"><i class="material-icons left">cloud</i>button</a></li>
+        </ul> 
+    </div>
+
+      <!-- /Left-Menu -->
+
+      <!-- Content -->
+
+    <div class="col s9 page-scroll" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center orange-text">Starter Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+
+      <!-- /Content -->
+
+  </div>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static "js/materialize.js" %}"></script>
+  <script src="{% static "js/init.js" %}"></script>
+
+  </body>
+</html>

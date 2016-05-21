@@ -63,7 +63,9 @@ def register_page(request):
                 'form': form,
                 'errors': errors})
 
+from django.views.decorators.csrf import csrf_protect
 
+@csrf_protect
 def login_page(request):
     if request.user.is_authenticated():
         return redirect('/')
