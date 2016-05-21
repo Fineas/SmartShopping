@@ -1,0 +1,196 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#menu{
+	z-index: 2 !important;
+	position: fixed;
+	background-color: #212830 !important;
+}
+
+#logo{
+	margin-bottom: -10px;
+}
+
+a{
+	color: #33cccc;
+}
+
+#wrapper{
+	background-color: #212830;
+}
+
+
+
+.aqua-card{
+	background-color: #cc3467;
+	width: 80%;
+	height: auto;
+	margin-top: 45%;
+	border: 1px solid #000;
+
+}
+
+#card-background{
+	background-color: #212830;
+}
+
+#product-picture{
+	width: 200px;
+	height: 250px;
+	margin: 0 auto;
+}
+
+#logo_brand{
+	width: 170px;
+}
+
+.ptitle h1{
+	color: #cc3467;
+}
+
+#bon_fiscal{
+	width: 230px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	height: auto !important;
+	background-color: none;
+	padding: 0;
+}
+
+#wrap-left img{
+	width: 100%;
+}
+
+#profileForm .content {
+    min-height: 100px;
+}
+#profileForm .content > .body {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    position: relative;
+}
+
+/*form styles*/
+#msform {
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #33ccca;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #33ccca;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #212830;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #33ccca;
+	color: white;
+}
+
+#brand-register-title{
+	margin-bottom: -5% !important;
+}
+
+.right_login{
+	margin-top: 35%;
+}
+
