@@ -1,0 +1,66 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#menu{
+	z-index: 2 !important;
+	position: fixed;
+	background-color: #212830 !important;
+}
+
+#logo{
+	margin-bottom: -10px;
+}
+
+a{
+	color: #33cccc;
+}
+
+#wrapper{
+	background-color: #212830;
+}
+
+
+
+.aqua-card{
+	background-color: #cc3467;
+	width: 80%;
+	height: auto;
+	margin-top: 45%;
+	border: 1px solid #000;
+
+}
+
+#card-background{
+	background-color: #212830;
+}
+
+#product-picture{
+	width: 200px;
+	height: 250px;
+	margin: 0 auto;
+}
+
+#logo_brand{
+	width: 170px;
+}
+
+.ptitle h1{
+	color: #cc3467;
+}
+
+#bon_fiscal{
+	width: 230px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	height: auto !important;
+	background-color: none;
+	padding: 0;
+}
+
+#wrap-left img{
+	width: 100%;
+}
