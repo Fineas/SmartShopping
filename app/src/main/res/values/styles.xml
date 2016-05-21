@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="AppTheme.Base">
+    </style>
+    <style name="SplashTheme" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/colorSplash</item>
+        <item name="colorPrimaryDark">@color/colorSplashDark</item>
+    </style>
+
+
+
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
