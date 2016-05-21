@@ -17,7 +17,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'magazin'
+    'magazin',
+    'authentication',
+    'homepages',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,6 +84,7 @@ AUTH_PASSWORD_VALIDATORS = [
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticcollected")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 
 LANGUAGE_CODE = 'en-us'
