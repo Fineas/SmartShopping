@@ -1,0 +1,3 @@
+Negru/Gri inchis = 212830
+Turcoaz = 33cccc
+Pink = cc3467
