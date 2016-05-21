@@ -15,18 +15,26 @@ class Account(models.Model):
     address = models.CharField(max_length=100, null=True)
 
 
-class LoginForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password']
-    
-    def clean_password(self): 
-        username = self.cleaned_data['username']
-        password = self.cleaned_data['password']
-        user = authenticate(username=username,password=password)
-        if user is None:
-            raise forms.ValidationError("Incorrect username or password")
-        return password
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=30, label='Username',
+                               widget=forms.TextInput(attrs={
+                                   'required': 'required'}))
+    password = forms.CharField(max_length=100, widget=forms.PasswordInput(
+        attrs={'required': 'required'}),
+                               label='Password')
+
+# class LoginForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ['username', 'password']
+#
+#     def clean_password(self):
+#         username = self.cleaned_data['username']
+#         password = self.cleaned_data['password']
+#         user = authenticate(username=username,password=password)
+#         if user is None:
+#             raise forms.ValidationError("Incorrect username or password")
+#         return password
         
     
 
