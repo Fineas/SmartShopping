@@ -10,3 +10,7 @@ def home(request):
          return render(request, 'home/index.html')
 
 
+def brandHome(request):
+    return render(request,'home/home2.html')
+
+

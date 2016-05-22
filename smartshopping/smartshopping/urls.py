@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^', include('bonuri.urls')),
     url(r'^', include('faq.urls')),
     url(r'^', include('contact.urls')),
+    url(r'^', include('brand.urls')),
 ]

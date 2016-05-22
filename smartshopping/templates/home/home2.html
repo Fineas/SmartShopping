@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      {% load staticfiles %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Smart Shop</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static "css/materialize.css"%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/style.css"%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+    <!-- NAVBAR -->
+
+  <nav class="light-blue lighten-1" role="navigation" id="menu">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="{% static "img/logo.png"%}" id="logo"></a>
+      <ul class="right hide-on-med-and-down">
+      <ul class="left hide-on-med-and-down">
+        <li><a href="/bonuri"><i class="material-icons left">credit_card</i>Bonuri</a></li>
+        <li><a href="/faq"><i class="material-icons left">info</i>FAQ</a></li>
+        <li><a href="/contact"><i class="material-icons left">cloud</i>Contact</a></li>
+      </ul>
+        <li> <!-- Dropdown Trigger -->
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>{{request.user.username}}</a>
+
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a>Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
+        <li><a>Bonuri<i class="left material-icons">credit_card</i></a></li>
+        <li><a>FAQ <i class="left material-icons">info</i></a></li>
+        <li><a>Contact<i class="left material-icons">cloud</i></a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+    <!-- /NAVBAR -->
+  
+    
+
+      <!-- Content -->
+      <div class="col s12 center" id="index-banner">
+      <div class="container">
+        	<br><br><br><br> 
+        	<a class="ptitle"><h1>Profile Page</h1></a>
+        	<br><br><br><br> 
+
+              <div class="row">
+              <div class="col s6">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="{% static "img/kaufland_logo.png"%}">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">KAUFLAND<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">Here are some nice stuffs about us, but you can/have to read those only in cause of u're like rlly rlly nervous, or rlly rlly bored about staying late night at "HAckatons, like HackTM, k guys, I'mm not trying to say that HackTM is boring but it is pretty exosting!
+                  Here are some nice stuffs about us, but you can/have to read those only in cause of u're like rlly rlly good!</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Edit Profile<i class="material-icons right">close</i></span>
+                  <br><br>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="text" class="validate">
+                      <label for="email">Username</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="text" class="validate">
+                      <label for="email">Country underway (Insert all of them)</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="text" class="validate">
+                      <label for="email">About Us</label>
+                    </div>
+                  </div>
+                  <button class="waves-effect waves-light btn">Ready</button>
+                </div>
+              </div>
+              </div>
+              <div class="col s6">
+                <div id="map"></div>
+                  <script>
+                    function initMap() {
+                      var mapDiv = document.getElementById('map');
+                      var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 44.540, lng: -78.546},
+                        zoom: 8
+                      });
+                    }
+                  </script>
+                  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+                      async defer></script>
+                </div>
+              </div>
+
+              <a class="ptitle"><h1>Today's sale</h1></a>
+
+                 <div class="row">
+    <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta1.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">LENOR 2L<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">15RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">LENOR 2L<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta2.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Mere Romaneste<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">3 RON/kg</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png" %}"id="logo_brand"></p>
+    </div>
+  </div>
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta3.jpg" %}"id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Trotineta DHS<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">200 RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+  </div>
+           <div class="row">
+    <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta1.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">LENOR 2L<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">15RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">LENOR 2L<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta2.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Mere Romaneste<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">3 RON/kg</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png" %}"id="logo_brand"></p>
+    </div>
+  </div>
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta3.jpg" %}"id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Trotineta DHS<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">200 RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+  </div>
+           <div class="row">
+    <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta1.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">LENOR 2L<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">15RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">LENOR 2L<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta2.png"%}" id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Mere Romaneste<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">3 RON/kg</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png" %}"id="logo_brand"></p>
+    </div>
+  </div>
+
+   <div class="card col s4">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{% static "img/oferta3.jpg" %}"id="product-picture">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Trotineta DHS<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">200 RON</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="{% static "img/brand1.png"%}" id="logo_brand"></p>
+    </div>
+  </div>
+  </div>
+
+      </div>
+      </div>
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a href="create_sale.html" class="btn-floating btn-large red">
+      <i class="material-icons">library_add</i>
+    </a>
+  </div>
+
+     <!-- /Content -->
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
