@@ -205,3 +205,18 @@ a{
 	color: #cc3467;
 	font-weight: 800px;
 }
+
+
+.registration_logo{
+	margin: 0 auto;
+	margin-left: -90%;
+}
+
+#nav-wrapper{
+	text-align: center;
+}
+
+#map{
+    width: 450px;
+    height: 500px;
+}

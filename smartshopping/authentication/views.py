@@ -13,7 +13,7 @@ from .models import LoginForm,RegisterForm
 @login_required
 def logout_view(request):
     logout(request)
-    return redirect(reverse('home'))
+    return redirect(reverse('login'))
 
 @csrf_protect
 def login_page(request):
