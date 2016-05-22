@@ -18,18 +18,25 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="img/logo.png" id="logo"></a>
       <ul class="right hide-on-med-and-down">
       <ul class="left hide-on-med-and-down">
-        <li><a><i class="material-icons left">credit_card</i>Bonuri</a></li>
-        <li><a><i class="material-icons left">info</i>FAQ</a></li>
-        <li><a><i class="material-icons left">cloud</i>Contact</a></li>
+        <li><a href="bonuri.html"><i class="material-icons left">credit_card</i>Bonuri</a></li>
+        <li><a href="faq.html"><i class="material-icons left">info</i>FAQ</a></li>
+        <li><a href="contact.html"><i class="material-icons left">cloud</i>Contact</a></li>
       </ul>
-        <li><a href="#">Nume<i class="left material-icons">perm_identity</i></a></li>
+        <li> <!-- Dropdown Trigger -->
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Fineas</a>
+
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Log Out</a></li>
+      </ul>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
-        <li><a href="#">Bonuri<i class="left material-icons">credit_card</i></a></li>
-        <li><a href="#">FAQ <i class="left material-icons">info</i></a></li>
-        <li><a href="#">Contact<i class="left material-icons">cloud</i></a></li>
+        <li><a>Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
+        <li><a>Bonuri<i class="left material-icons">credit_card</i></a></li>
+        <li><a>FAQ <i class="left material-icons">info</i></a></li>
+        <li><a>Contact<i class="left material-icons">cloud</i></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -53,7 +60,6 @@
               <th data-field="price">Vezi Bon</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>05.06.2016</td>
@@ -156,6 +162,7 @@
       <p>Vino si incearca doar azi superbul pret de 15RON la prodsul Lenor, in cantitate de 2L doar la magazinul<img src="img/brand1.png" id="logo_brand"></p>
     </div>
   </div>
+</div>
   <div class="row">
     <div class="card col s4">
     <div class="card-image waves-effect waves-block waves-light">
@@ -207,6 +214,18 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+   $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, 
+      hover: true,
+      gutter: 0,
+      belowOrigin: false,
+      alignment: 'left'
+    }
+  );
+  </script>
 
   </body>
 </html>

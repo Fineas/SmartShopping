@@ -14,22 +14,29 @@
   
     <!-- NAVBAR -->
 
-  <nav class="light-blue lighten-1" role="navigation" id="menu">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="img/logo.png" id="logo"></a>
+   <nav class="light-blue lighten-1" role="navigation" id="menu">
+    <div class="nav-wrapper container"><a id="logo-container" href="home.html" class="brand-logo"><img src="img/logo.png" id="logo"></a>
       <ul class="right hide-on-med-and-down">
       <ul class="left hide-on-med-and-down">
-        <li><a><i class="material-icons left">credit_card</i>Bonuri</a></li>
-        <li><a><i class="material-icons left">info</i>FAQ</a></li>
-        <li><a><i class="material-icons left">cloud</i>Contact</a></li>
+        <li><a href="bonuri.html"><i class="material-icons left">credit_card</i>Bonuri</a></li>
+        <li><a href="faq.html"><i class="material-icons left">info</i>FAQ</a></li>
+        <li><a href="contact.html"><i class="material-icons left">cloud</i>Contact</a></li>
       </ul>
-        <li><a href="#">Nume<i class="left material-icons">perm_identity</i></a></li>
+        <li> <!-- Dropdown Trigger -->
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Fineas</a>
+
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">Log Out</a></li>
+      </ul>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
-        <li><a href="#">Bonuri<i class="left material-icons">credit_card</i></a></li>
-        <li><a href="#">FAQ <i class="left material-icons">info</i></a></li>
-        <li><a href="#">Contact<i class="left material-icons">cloud</i></a></li>
+        <li><a>Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
+        <li><a>Bonuri<i class="left material-icons">credit_card</i></a></li>
+        <li><a>FAQ <i class="left material-icons">info</i></a></li>
+        <li><a>Contact<i class="left material-icons">cloud</i></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -53,20 +60,20 @@
             <div class="input-field col s6">
               <i class="material-icons prefix">account_circle</i>
               <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">First Name</label>
+              <label for="icon_prefix">Please tell us your Email</label>
             </div>
             <div class="input-field col s6">
               <i class="material-icons prefix">phone</i>
               <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
+              <label for="icon_telephone">Put a Title</label>
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">phone</i>
               <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
+              <label for="icon_telephone">Let us know what we can do for you</label>
             </div>
           </div>
-          <button class="waves-effect waves-light btn">button</button>
+          <button class="waves-effect waves-light btn">SEND</button>
         </form>
       </div>
         
