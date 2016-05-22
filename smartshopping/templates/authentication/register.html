@@ -13,27 +13,21 @@
 </head>
 <body id="wrapper">
   
-    <div class="">
       <div class="row">
-          <div class="col s6">a</div>
           
-          <div class="col s6">
-            <div class="card aqua-card">
-            <div class="card-content white-text">
-                <div class="row">
-                    <form method="POST">
-                    {% csrf_token %}
-		    {% if errors %}
-                    <div class="error">
-		      {% for message in errors %}
-                        <ul>
-                            <li>{{ message }}</li>
-                        </ul>
-                    {% endfor %}
-                    </div>
-		    {% endif %}
-		    {% for field in form %}
+          <div class="col s6" id="wrap-left"><img src="{% static "img/background.jpg" %}"></div>
 
+          <div class="col s6">
+            <form method="POST" id="msform" class="right_login">
+
+                <form method="POST">
+                    {% csrf_token %}
+              <fieldset>
+                <h2 class="fs-title" id="logIn">Register</h2>
+                <h3 class="fs-subtitle">Log in into your account</h3>
+                <!--<input type="text" name="email" placeholder="Email" />-->
+                <!--<input type="password" name="pass" placeholder="Password" />-->
+                  {% for field in form %}
                     <div class="input-container">
                         <label for="username">{{ field.label }}</label>
 		        {{ field }}
@@ -41,21 +35,17 @@
                         <div class="bar"></div>
                     </div>
 		    {% endfor %}
-                    <div class="button-container">
-                        <button><span style="color:blue; margin: 0 auto ;" >Register</span></button>
+                <!--<input type="button" name="next" class="next action-button" value="Submit" />-->
+                  <!--<button type="button" name="next" class="next action-button" value="Submit" >Log in</button>-->
+                  <div class="button-container">
+                        <button><span style="color:blue;" >Register</span></button>
                     </div>
+                <br><a href="#" class="partnere_button">Become a partnere.</a>
+              </fieldset>
+                    </form>
+            </form>
 
-                </form>
-    </div>
 
-
-  </section>
-                        </form>
-                </div>
-          
-          </div>
-      </div>
-    </div>
     </div>
     </div>
           
