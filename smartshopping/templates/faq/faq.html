@@ -8,37 +8,40 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="{% static "css/materialize.css" %}"  type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{% static "css/style.css" %}"  type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/materialize.css"%}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static "css/style.css"%}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
     <!-- NAVBAR -->
 
   <nav class="light-blue lighten-1" role="navigation" id="menu">
-    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo"><img src="{% static "img/logo.png" %}" id="logo"></a>
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo"><img src="{% static "img/logo.png"%}" id="logo"></a>
       <ul class="right hide-on-med-and-down">
       <ul class="left hide-on-med-and-down">
-        <li><a><i class="material-icons left">credit_card</i>Bonuri</a></li>
-        <li><a><i class="material-icons left">info</i>FAQ</a></li>
-        <li><a><i class="material-icons left">cloud</i>Contact</a></li>
+        <li><a href="/bonuri"><i class="material-icons left">credit_card</i>Bonuri</a></li>
+        <li><a href="/faq"><i class="material-icons left">info</i>FAQ</a></li>
+        <li><a href="/contact"><i class="material-icons left">cloud</i>Contact</a></li>
       </ul>
-        <li><a href="#">  {{request.user.username}}<i class="left material-icons">perm_identity</i></a>
-            <li><a href="/logout">logout</a></li>
-        </li>
+        <li> <!-- Dropdown Trigger -->
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>{{request.user.username}}</a>
 
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
-        <li><a href="/bonuri">Bonuri<i class="left material-icons">credit_card</i></a></li>
-        <li><a href="#">FAQ <i class="left material-icons">info</i></a></li>
-        <li><a href="#">Contact<i class="left material-icons">cloud</i></a></li>
+        <li><a>Silaghi Fineas<i class="left material-icons">perm_identity</i></a></li>
+        <li><a>Bonuri<i class="left material-icons">credit_card</i></a></li>
+        <li><a>FAQ <i class="left material-icons">info</i></a></li>
+        <li><a>Contact<i class="left material-icons">cloud</i></a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
 
     <!-- /NAVBAR -->
   
